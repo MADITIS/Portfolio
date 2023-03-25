@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script defer src="{{url_for('static', filename='js/main.js')}}"></script>
+    <script defer src="https://kit.fontawesome.com/006ebfddac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+    <title>Manik | Porfolio</title>
+  </head>
+
+  <body>
+    <div class="star-container">
+    <header class="primary-header">
+      <div class="container">
+        <div class="nav flex padding-block-300">
+          <h1 class="secondary-title"><a href="/">Manik Das</a></h1>
+          <nav class="navbar">
+            <ul class="flex">
+              <li>
+                <a href="https://github.com/MADITIS"><img src="{{url_for('static', filename='images/icon-github.svg')}}" alt="github" /></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/manik-das-9457a2253/"
+                  ><img src="{{url_for('static', filename='images/icon-linkedin.svg')}}" alt="linkedin"
+                /></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/manikd729"
+                  ><img src="{{url_for('static', filename='images/icon-twitter.svg')}}" alt="twitter"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- </div> -->
+      </div>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <div class="wrapper flow-content--xll">
+          <div class="hero__content flow-content--small">
+            <h2 class="section-title">
+              Nice to meet you! I'm <span class="clr-accent">Manik</span>.
+            </h2>
+            <p class="section-description">
+              Web Developer &amp a problem solver.
+            </p>
+          </div>
+          <div class="hover-elem">
+            <a href="#form" class="btn border-btn secondary-btn text-upper">contact me</a>
+            <div class="left-elem elem"></div>
+            <div class="bottom-elem elem"></div>
+            <div class="top-elem elem"></div>
+            <div class="right-elem elem"></div>
+            
+          </div>
+        </div>
+        <!-- <div class="star-container">
+        </div> -->
+      </div>
+    </section>
+  </div>
+    <main>
+      <section class="qualifications text-center">
+        <div class="container">
+          <div class="wrapper">
+            <ul class="grid">
+              <li>
+                <a href="#">
+                   <i class="fa-brands fa-python"></i>
+                </a>
+                <!-- <p>2 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-js"></i>
+                </a>
+                <!-- <p>1 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-golang"></i>
+                </a>
+                <!-- <p>1 Years Experience</p> -->
+              </li>
+
+              <li>
+                <a href="#">
+                    <i class="devicon-django-plain"></i>
+                  </a>
+                  <!-- <p>1 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                  <i class="devicon-flask-original"></i>
+                  </a>
+                  <!-- <p>1 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                    <i class="fa-brands fa-html5"></i> 
+                    </a>
+                    <!-- <p>1 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-css3"></i>
+                </a>
+                <!-- <p>1 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                  <i class="devicon-postgresql-plain"></i>
+                </a>
+                <!-- <p>1 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                  <i class="devicon-redis-plain"></i>
+                </a>
+                <!-- <p>1 Years Experience</p> -->
+              </li>
+              <li>
+                <a href="#">
+                  <i class="devicon-mongodb-plain"></i>
+                </a>
+                <!-- <p>1 Years Experience</p> -->
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="projects text-center padding-block-500">
+        <div class="container flow-content--xl">
+          <header class="flex">
+            <div class="project-section-title">
+              <h2 class="header__title">Some Things I’ve Built</h2>
+              <span></span>
+            </div>
+          </header>
+
+          <ul class="project__items grid">
+          </ul>
+        </div>
+      </section>
+    </main>
+    <section class="cto text-center">
+      <div class="container">
+        <div class="wrapper flow-content--xl">
+          <div class="flow-content--xl">
+            <h2 class="section-title text-upper">Contact</h2>
+            <p>
+              Feel free to send any query. I would love to hear about your projects.
+              Please fill in the form, and I'll get back to you as soon as possible
+            </p>
+          </div>
+          <form class="form flex" name="contact-form" id="form">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <input data-type="input" type="text" name="name" id="name" placeholder="NAME">
+            <input data-type="input" type="text" name="email" id="email" placeholder="EMAIL">
+            <textarea data-type="input" name="message" id="" placeholder="MESSAGE"></textarea>
+            <div class="btn-elem bottom-accent">
+              <button class="btn" type="submit">SEND MESSAGE</button>
+              <div class="btn-left-elem btn-border"></div>
+              <div class="btn-top-elem btn-border"></div>
+              <div class="btn-right-elem btn-border"></div>
+              <div class="btn-bottom-elem btn-border"></div>
+              <div type="submit" class="loader"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- <footer class="main-footer">
+       <div class="container">
+        <div class="nav flex">
+          <a href="/" class="secondary-title">maditis</a>
+          <nav class="navbar">
+            <ul class="flex">
+              <li>
+                <a href=""><img src="./images/icon-github.svg" alt="github" /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="./images/icon-linkedin.svg" alt="linkedin"
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="/images/icon-twitter.svg" alt="twitter"
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer> -->
+  </body>
+</html>
