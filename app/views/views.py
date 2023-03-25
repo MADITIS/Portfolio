@@ -11,9 +11,10 @@ scopes = [
     'https://www.googleapis.com/auth/spreadsheets',
     'https://www.googleapis.com/auth/drive'
 ]
+
 gc = gspread.service_account(
-    filename=pathlib.Path("credential.json"), scopes=scopes)
-sh = gc.open_by_key("1aL6i7mhAPGgqfkJtlBXczC0RL1dwcsXv5fBe8p5GQd0")
+    filename=pathlib.Path("path/to/credential.json"), scopes=scopes)
+sh = gc.open_by_key("key of the sheet")
 sheet = sh.sheet1
 
 
